@@ -5,7 +5,6 @@ metadata:
     env: dev
   name: ingress-netflix-app
   namespace: ns-netflix
-  annotations:
 spec:
   ingressClassName: nginx
   rules:
