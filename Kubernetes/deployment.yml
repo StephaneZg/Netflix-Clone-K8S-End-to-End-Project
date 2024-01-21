@@ -4,6 +4,7 @@ metadata:
   name: netflix-app
   labels:
     app: netflix-app
+  namespace: ns-netflix
 spec:
   replicas: 2
   selector:
