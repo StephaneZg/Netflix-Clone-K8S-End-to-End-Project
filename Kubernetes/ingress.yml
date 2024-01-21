@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    env: dev
+  name: ingress-netflix-app
+  namespace: ns-netflix
+  annotations:
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: 'netflix.zweek.zabens.com'
+      http:
+        paths:
+          - pathType: Prefix
+            path: '/'
+            backend:
+              service:
+                name: netflix-svc
+                port:
+                  number: 80
