@@ -4,6 +4,7 @@ metadata:
   name: netflix-svc
   labels:
     app: netflix-svc
+  namespace: ns-netflix
 spec:
   ports:
   - port: 80
