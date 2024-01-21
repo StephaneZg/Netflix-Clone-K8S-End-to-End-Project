@@ -1,3 +1,16 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: ns-netflix
+    env: dev
+  name: ns-netflix
+spec:
+  finalizers:
+    - kubernetes
+status:
+  phase: Active
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
