@@ -13,6 +13,7 @@ FROM nginx:stable-alpine
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 COPY --from=builder /app/dist .
-COPY default.conf  /etc/nginx/conf.d/
+COPY --from=builder /app/default.conf  /etc/nginx/conf.d/
+COPY --from=builder /app/vercel.conf .
 EXPOSE 80
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
