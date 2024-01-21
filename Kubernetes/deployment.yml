@@ -31,5 +31,6 @@ spec:
       containers:
       - name: netflix-app
         image: stephanezang/weekend_challenge1:netflix
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
